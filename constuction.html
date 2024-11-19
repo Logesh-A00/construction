@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* Keyframe for left-to-right movement */
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .card {
+      animation: slideIn 5s ease-out forwards;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 5s ease-out, opacity 5s ease-out;
+      animation-iteration-count: 10;
+      animation-delay: 0.5s;
+    }
+
+    .card:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+
+    .card:nth-child(4) {
+      animation-delay: 2s;
+    }
+
+    .card:nth-child(5) {
+      animation-delay: 2.5s;
+    }
+
+    .card:nth-child(6) {
+      animation-delay: 3s;
+    }
+
+    .card:nth-child(7) {
+      animation-delay: 3.5s;
+    }
+
+    .card:nth-child(8) {
+      animation-delay: 4s;
+    }
+
+    .card:nth-child(9) {
+      animation-delay: 4.5s;
+    }
+
+    .card:nth-child(10) {
+      animation-delay: 5s;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-logo img {
+      width: 150px;
+    }
+  </style>
+
+
+</head>
+
+<body><!---navbar-->
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nkl consturaction</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+        </ul>
+        <!--login button-->
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@mdo">LOGIN</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">WELCOME</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="E-mail" class="col-form-label text-white">E-mail:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="Password" class="col-form-label text-white">Password</label>
+                    <input type="text" class="form-control" id="Password">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">login</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-----end-->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!---corosal-->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/imgg1.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/imgg2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/imgg3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!---Hero page-->
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white"><em>Construction works</em></h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">We at Pi Infratech construction company in chennai give not just the shape, form and color
+          to the home; we give life to your dream that is your home. Pi Infratech specializes in building durable and
+          affordable customized homes with quality construction materials and professional construction process.
+
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Our plan</button>
+          <a href="https://piinfratech.com/projects/"><button type="button"
+              class="btn btn-outline-light btn-lg px-4">view our works</button></a>
+        </div>
+      </div>
+    </div>
+    <!--product1-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/in1.webp" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i>Apartment house</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product2-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/h1.jpg" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i>Wood drive house</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product3-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/h2.jpg" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i>Luxury drive homes</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product4-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/h3.jpg" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i> Crossbar house</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product5-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/h4.jpg" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i>Combo house</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--product6-->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Product Image -->
+          <img src="./img/h5.jpg" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+          <!-- Product Details -->
+          <h1 class="display-4"><i>package house</i></h1>
+          <p class="text-muted">Apartment</p>
+          <p class="lead">"Our construction company offers high-quality residential and commercial building solutions,
+            delivering exceptional value to every project."With a proven track record of on-time, on-budget completions,
+            we ensure that every client receives personalized service and top-notch craftsmanship."</p>
+          <h3 class="text-primary">$199.99</h3>
+          <p class="mb-4">Free shipping for all orders over $50.</p>
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg me-2">Add to Cart</button>
+            <a href="./checkout.html"> <button class="btn btn-outline-primary btn-lg">Buy Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--cards-->
+    <div class="container py-5">
+      <div class="row">
+        <!-- Custom Animated Cards -->
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h1.jpg" class="card-img-top" alt="Card 1">
+            <div class="card-body">
+              <h5 class="card-title">Product 1</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h2.jpg" class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">Product 2</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h3.jpg" class="card-img-top" alt="Card 3">
+            <div class="card-body">
+              <h5 class="card-title">Product 3</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h4.jpg" class="card-img-top" alt="Card 4">
+            <div class="card-body">
+              <h5 class="card-title">Product 4</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h5.jpg" class="card-img-top" alt="Card 5">
+            <div class="card-body">
+              <h5 class="card-title">Product 5</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/h6.jpg" class="card-img-top" alt="Card 6">
+            <div class="card-body">
+              <h5 class="card-title">Product 6</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/img1.webp" class="card-img-top" alt="Card 7">
+            <div class="card-body">
+              <h5 class="card-title">Product 7</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow-sm">
+            <img src="./img/imgg1.jpg" class="card-img-top" alt="Card 8">
+            <div class="card-body">
+              <h5 class="card-title">Product 8</h5>
+              <p class="card-text">This is a short description of the product.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <!-- Column 1: Logo & Brief Info -->
+              <div class="col-md-4 footer-logo">
+                <img src="./img/logo1.png" alt="Construction Company Logo">
+                <p class="mt-3">Building Tomorrow,! Today. Your trusted partner in construction and development.</p>
+              </div>
+
+              <!-- Column 2: Quick Links -->
+              <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Contact Information -->
+              <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-geo-alt"></i> 123 Main Street, VOC 100, madurai, india</li>
+                  <li><i class="bi bi-telephone"></i> +91 834 567 890</li>
+                  <li><i class="bi bi-envelope"></i> nkl@constructioncompany.com</li>
+                </ul>
+              </div>
+            </div>
+            <hr class="border-light">
+            <div class="row text-center">
+              <div class="col">
+                <p>&copy; 2024 Construction Company. All rights reserved.</p>
+                <p>Crafted with <span style="color: red;">&#10084;</span> <i>NKL construction company</i></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
